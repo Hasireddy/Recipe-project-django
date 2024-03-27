@@ -10,4 +10,13 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request,'index.html')
+    peoples = [
+        {'name':'Abhijit','age':30},
+        {'name':'Rani','age':35},
+        {'name':'vicky','age':25}
+    ]
+
+    for people in peoples:
+        print(people)
+
+    return render(request,'index.html',context = {'peoples':peoples})
