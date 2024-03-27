@@ -13,7 +13,8 @@ def home(request):
     peoples = [
         {'name':'Abhijit','age':30},
         {'name':'Rani','age':35},
-        {'name':'vicky','age':25}
+        {'name':'vicky','age':25},
+        {'name':'John','age':18}
     ]
 
     for people in peoples:
