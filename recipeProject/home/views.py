@@ -17,7 +17,21 @@ def home(request):
         {'name':'John','age':18}
     ]
 
+    vegetables = ['tomato','potato','brinjal']
+
     for people in peoples:
         print(people)
 
-    return render(request,'index.html',context = {'peoples':peoples})
+    return render(request,'index.html',context = {'peoples':peoples,'vegetables':vegetables})
+
+def about(request):
+    context = {'page':'About'}
+    return render(request,"about.html",context)
+
+def contact(request):
+    context = {'page':'Contact'}
+    return render(request,"contact.html",context)
+
+def homePage(request):
+    context = {'page':'Homepage'}
+    return render(request,"base.html",context)

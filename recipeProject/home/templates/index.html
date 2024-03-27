@@ -28,7 +28,7 @@
         <td>{{forloop.counter}}</td>
         <td>{{people.name}}</td>
         <td>{{people.age}}</td>  
-        <td>
+        <td {% if people.age > 18 %} style="background-color:red" {% endif %} >
             {% if people.age == 18 %}
             👍
             {% else %}
@@ -38,5 +38,15 @@
     </tr>
     {% endfor %}
 </table>
+<p>
+    {% if "cucumber" in vegetables %}
+    Yes available
+    {% elif "tomato" in vegetables %}
+    Tomato available
+    {% else %}
+    Not available
+    {% endif %}
+</p>
+<p>{{vegetables.firstof}}</p>
 </body>
 </html>
